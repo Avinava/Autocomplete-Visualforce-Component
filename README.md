@@ -20,7 +20,7 @@ Version
 Installation
 --------------
 
-1.Install the Package from https://login.salesforce.com/packaging/installPackage.apexp?p0=04t90000000M9Ul
+* .Install the Package from https://login.salesforce.com/packaging/installPackage.apexp?p0=04t90000000M9Ul
 
 
 Usage
