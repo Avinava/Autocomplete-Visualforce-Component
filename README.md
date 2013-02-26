@@ -25,6 +25,6 @@ Installation
 
 Usage
 -
-<c:Autocomplete labelField="Name" valueField="Id" SObject="Contact" targetField="{!targetFieldCon}" /> 
+    <c:Autocomplete labelField="Name" valueField="Id" SObject="Contact" targetField="{!targetFieldCon}" /> 
   
     
