@@ -1,0 +1,83 @@
+<apex:page controller="AutoComplete_Test_Con">
+   
+    <apex:form >
+        <apex:sectionHeader title="Visualforce Auto-Complete Component" subTitle=" Auto-Complete Demo"/>
+        <ul>
+            <li>This page shows how the new components looks in comparison to <b>Native VF components</b>.The New compponent inherits the look and feel of <b>Native VF components</b>.</li>
+            <li style="color:blue;font-weight:bold">This page also shows that the same component can be reused multiple times in single a page.</li>
+            <li>Press Get Value To See the Value Passed By Component</li>
+        </ul>
+        <apex:pageBlock >
+            
+            <apex:pageBlockSection title="This is the brand new Autocomplete Component(This looks exactly similar to the above native components)" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <p style="color:Green;font-weight:bold">Autocomplete will work with these components</p>
+                </apex:pageBlockSectionItem> <apex:pageBlockSectionItem />
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Account</apex:outputLabel>
+                    <c:Autocomplete labelField="Name" valueField="Id" SObject="Account" targetField="{!targetField}" id="combobox"/>
+                </apex:pageBlockSectionItem>
+                 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Contact</apex:outputLabel>
+                    <c:Autocomplete labelField="Name" valueField="Id" SObject="Contact" targetField="{!targetFieldCon}" id="comboboxCon"/>
+                </apex:pageBlockSectionItem>  
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Lead</apex:outputLabel>
+                    <!--Search the name field and return Id as the value in targetField-->
+                    <c:Autocomplete labelField="Name" valueField="Id" SObject="Lead" targetField="{!targetFieldLead}"/>
+                </apex:pageBlockSectionItem>  
+                        
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case</apex:outputLabel>
+                    <c:Autocomplete labelField="Casenumber" valueField="Id" SObject="Case" targetField="{!targetFieldCase}"/>
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="This is simple label and text  field(Native Components, For Comparison Only)" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <p style="color:Red;font-weight:bold">This is simple label and text  field(Native Components, For Comparison Only)</p>
+                </apex:pageBlockSectionItem> <apex:pageBlockSectionItem />
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Account</apex:outputLabel>
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Contact</apex:outputLabel>
+                    <apex:inputText />
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Lead</apex:outputLabel>
+                    <apex:inputText />
+               </apex:pageBlockSectionItem>
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Case</apex:outputLabel>
+                    <apex:inputText />
+               </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Press Get Value To See the Value Passed By Component" id="val">
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Acoount</apex:outputLabel>
+                     <apex:outputText value="{!targetField}"/>  
+                </apex:pageBlockSectionItem>  
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Contact</apex:outputLabel>
+                     <apex:outputText value="{!targetFieldCon}"/> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Lead</apex:outputLabel>
+                     <apex:outputText value="{!targetFieldLead}"/> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     <apex:outputLabel >Case</apex:outputLabel>
+                     <apex:outputText value="{!targetFieldCase}"/> 
+                </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                 <apex:commandButton value="GetValue" reRender="val,val1"/>
+            </apex:pageBlockButtons>
+           
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
