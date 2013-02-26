@@ -26,5 +26,9 @@ Installation
 Usage
 -
     <c:Autocomplete labelField="Name" valueField="Id" SObject="Contact" targetField="{!targetFieldCon}" /> 
+    
+Demo
+-
+http://blogforce9dev-developer-edition.ap1.force.com/autocomplete
   
     
