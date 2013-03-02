@@ -14,13 +14,13 @@ Few features of the autocomplete component
 Version
 -
 
-1.0
+1.3
 
 
 Installation
 --------------
 
-* .Install the Package from https://login.salesforce.com/packaging/installPackage.apexp?p0=04t90000000M9Ul
+* .Install the Package from https://login.salesforce.com/packaging/installPackage.apexp?p0=04t90000000M9Zr
 
 
 Usage
