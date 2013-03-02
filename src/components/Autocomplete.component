@@ -82,8 +82,8 @@
             padding-right: 20px;
         }
     </style>
-    <apex:inputText styleClass="auto{!randomJsIden}"/>
-    <apex:actionFunction name="refreshPanel{!randomJsIden}" reRender="hiddenPanel"/> 
+    <apex:inputText styleClass="auto{!randomJsIden}" onkeyup="$j('.hiddenField{!randomJsIden}').val($j(this).val());"/>
+    <apex:actionFunction name="refreshPanel{!randomJsIden}"  reRender="hiddenPanel"/> 
     <apex:outputPanel id="hiddenPanel">
         <apex:actionRegion >
             <apex:inputText value="{!targetField}" id="hiddenField" styleClass="hiddenField{!randomJsIden}" style="display:none"/>

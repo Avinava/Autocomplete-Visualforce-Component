@@ -3,21 +3,8 @@
     <fullName>Visualforce Auto-Complete Component</fullName>
     <description>Visualforce Auto-Complete Component</description>
     <types>
-        <members>AutoComplete_Con</members>
-        <members>AutoComplete_Test_Con</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
         <members>Autocomplete</members>
         <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>autocomplete</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>jQuery_BlogForce9_162</members>
-        <name>StaticResource</name>
     </types>
     <version>27.0</version>
 </Package>
