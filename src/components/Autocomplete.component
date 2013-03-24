@@ -2,7 +2,7 @@
     <apex:attribute name="SObject" description="SOQL Object to query" type="String" assignTo="{!sObjVal}" required="true"/>
     <apex:attribute name="labelField" description="API Name of Field to display for label" type="String" required="true"/>
     <apex:attribute name="valueField" description="API Name of Field to display for value that is passed to the targetField" type="String" required="true"/>
-    <apex:attribute name="targetField" assignTo="{!targetField}" description="Field of current object that will hold the selection." type="Object"/>
+    <apex:attribute name="targetField" description="Field of current object that will hold the selection." type="Object"/>
     <!--Required js files-->
     <apex:includeScript value="{!URLFOR($Resource.jQuery_BlogForce9_162, 'js/jquery-1.6.2.min.js')}"/>
     <apex:includeScript value="{!URLFOR($Resource.jQuery_BlogForce9_162, 'js/jquery-ui-1.8.16.custom.min.js')}"/>
@@ -82,11 +82,9 @@
             padding-right: 20px;
         }
     </style>
-    <apex:inputText styleClass="auto{!randomJsIden}" onkeyup="$j('.hiddenField{!randomJsIden}').val($j(this).val());"/>
-    <apex:actionFunction name="refreshPanel{!randomJsIden}"  reRender="hiddenPanel"/> 
+    <apex:inputText styleClass="auto{!randomJsIden}" value="{!cacheField}" onchange="$j('.hiddenField{!randomJsIden}').val($j(this).val());"/>
+   
     <apex:outputPanel id="hiddenPanel">
-        <apex:actionRegion >
-            <apex:inputText value="{!targetField}" id="hiddenField" styleClass="hiddenField{!randomJsIden}" style="display:none"/>
-        </apex:actionRegion>
+        <apex:inputText value="{!targetField}" id="hiddenField" styleClass="hiddenField{!randomJsIden}" style="display:none"/>
     </apex:outputPanel>
 </apex:component>

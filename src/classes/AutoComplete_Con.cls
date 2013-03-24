@@ -1,10 +1,10 @@
 public class AutoComplete_Con {
-    private Object targetField;
+
     public String labelField{ get; set; }
     public String valueField{ get; set; }
     public String sObjVal{get;set;}
     public Integer randomJsIden{get;set;}
-    
+    public String cacheField{get;set;} 
    
     public AutoComplete_Con(){
         randomJsIden = getRandomNumber(1000000);
@@ -12,15 +12,7 @@ public class AutoComplete_Con {
         labelField='Name';
         valueField='Id';
     }
-    
-    /*
-    *Setter method to set the targetField
-    ***/
-    public void setTargetField(Object targetField){
-        if(targetField == null){
-            this.targetField = targetField;
-        }
-    }
+
     
     /*
     *Random number generator to change the js function name if multiple components us
@@ -55,7 +47,6 @@ public class AutoComplete_Con {
             System.assertEquals(1,AutoComplete_Con.getData('Account','Name','Id','Test111').size());
             System.assertEquals(0,AutoComplete_Con.getData('Account','Name','Id','xxxxxxx').size());
             AutoComplete_Con controller = new AutoComplete_Con ();
-            controller.setTargetField(null);
         Test.stopTest();
         
     }
