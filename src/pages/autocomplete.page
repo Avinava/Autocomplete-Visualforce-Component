@@ -1,5 +1,5 @@
 <apex:page controller="AutoComplete_Test_Con">
-   
+    <c:AllDemoLink />
     <apex:form >
         <apex:sectionHeader title="Visualforce Auto-Complete Component" subTitle=" Auto-Complete Demo"/>
         <ul>

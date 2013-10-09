@@ -8,6 +8,7 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>AllDemoLink</members>
         <members>Autocomplete</members>
         <name>ApexComponent</name>
     </types>
@@ -17,6 +18,7 @@
     </types>
     <types>
         <members>jQuery_BlogForce9_162</members>
+        <members>jQuery_UI_1_10_2</members>
         <name>StaticResource</name>
     </types>
     <version>27.0</version>
