@@ -3,6 +3,8 @@ Autocomplete-Visualforce-Component
 
 This is a visualforce component that can convert any field into a Autocomplete Component
 
+[This version is deprecated you can have a look on a improved verison of the same here .https://github.com/Avinava/Autocomplete-Visualforce-Component-V2]
+
 Few features of the autocomplete component
 -
 
