@@ -20,7 +20,7 @@ Version
 Installation
 --------------
 
-* .Install the Package from https://login.salesforce.com/packaging/installPackage.apexp?p0=04t90000000M9Zr
+* .http://blogforce9dev-developer-edition.ap1.force.com/ProjectDetail?id=a0290000007rf2z
 
 
 Usage
